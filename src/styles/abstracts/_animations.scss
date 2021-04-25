@@ -1,0 +1,49 @@
+/* for browser performance it's best to only animate 2 different properties:
+   - opacity
+   - transform - and w/ transform we can do a lot
+it's what browsers are optimized for */
+@keyframes moveInLeft {
+  /* 0% - before animations starts */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  /* 100% - when animations ends */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  /* 0% - before animations starts */
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  /* 100% - when animations ends */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  /* 0% - before animations starts */
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  /* 100% - when animations ends */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

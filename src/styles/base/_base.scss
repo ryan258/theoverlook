@@ -2,30 +2,66 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
-/**
- * Set up a decent box model on the root element
- */
-html {
-  box-sizing: border-box;
-}
-
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
 /**
+ * Set up a decent box model on the root element
+ */
+
+html {
+  /* this was a bad practice because it overrides the user agent's prefs */
+  /* font-size: 10px; */
+  /* so we make it a percentage of the usual 16px so users can zoom in */
+  // define 1 rem as 10px
+  font-size: 62.5%; // 1rem = 10px; 10/16=.625 = 62.5%
+
+  // larger MQs before smaller ones
+  @include respond(tab-land) {
+    // < 1200
+    font-size: 56.25%; // 1rem = 9px; 9/16=.5625 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    // < 900
+    font-size: 50%; // 1rem = 8px; 8/16=.5 = 50%
+  }
+
+  // @include respond(phone) {
+  //   // < 600
+  //   font-size: 30%; // 1rem = 4.8; 4.8/16=.3 = 30%
+  // }
+
+  @include respond(big-desktop) {
+    // > 1800
+    font-size: 75%; // 1rem = 12px; 12/16=.75 = 75%
+  }
+}
+
+body {
+  padding: 3rem;
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+  /*use inheritance over universal selector when you can*/
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: $color-secondary;
+  color: $color-white;
+}
+/**
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $color-primary;
   text-decoration: none;
 
   @include on-event {

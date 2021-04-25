@@ -32,3 +32,40 @@
   }
 }
 
+@mixin centerXY {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin respond($breakpoint) {
+  //! EMS and REMS in MQs aren't affected by root font size!
+  //! 1 (R)EM is always = to the font-size coming from the browser (16px) and if user changes it to 20px, it's that, and there's nothing we can do about it.
+  // REMs fail to work as intended in some of the browsers, so EMs it is
+  // so EMs are the best options for MQs
+  // assume here that 1em = 16px
+  @if $breakpoint == phone {
+    // 600/16 = 37.5
+    // @media (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
+      // pass in a block of code with @content
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } // 900
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // 1200
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800
+  }
+}
