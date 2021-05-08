@@ -65,3 +65,9 @@ $bp-small: 37.5em; // 600px;
 ///   $base-url: 'http://cdn.example.com/assets/';
 // $base-url: '/assets/' !default;
 $base-url: '/images/' !default;
+
+//! GRID
+$grid-width: 114rem;
+$gutter-vertical-small: 6rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

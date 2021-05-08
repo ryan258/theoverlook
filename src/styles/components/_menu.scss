@@ -1,0 +1,40 @@
+.sample-menu {
+  height: 100vh;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+  li {
+    overflow: hidden;
+  }
+  a {
+    color: #3a3a3d;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    // we're using transition in 2 places so we can catch the ease-out in both directions
+    transition: all 0.3s ease-out;
+    &::after {
+      content: '';
+      display: block;
+      background-color: rgba(255, 0, 0, 0.7);
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 4px;
+      transform: translateX(-100%);
+      transition: all 0.3s ease-out;
+    }
+    &:hover {
+      color: red;
+      transition: all 0.3s ease-out;
+      &::after {
+        transition: all 0.3s ease-out;
+        transform: translateX(0);
+      }
+    }
+  }
+}

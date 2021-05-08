@@ -1,3 +1,198 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+
+.welcome-section {
+  padding: 10rem 0;
+  background: #fff;
+}
+
+.main-services-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.main-service {
+  // width: 1fr;
+  position: relative;
+  padding: 1.5rem 3rem;
+  color: $color-white;
+  text-align: center;
+  // border: 1px solid;
+
+  min-height: 63.5rem;
+
+  &__content-front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    font-family: $text-font-stack;
+  }
+
+  &--1 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url('../images/exterior-bright.png');
+    background-position: center bottom;
+    background-size: cover;
+    transition: all 2s;
+    &:hover {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/exterior-bright.png');
+    }
+  }
+  &--2 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url('../images/bar-w-lloyd-1.png');
+    background-position: center bottom;
+    background-size: cover;
+  }
+  &--3 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url('../images/grady-2.png');
+    background-position: center bottom;
+    background-size: cover;
+  }
+  &--4 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url('../images/hedge-maze-3.png');
+    background-position: center bottom;
+    background-size: cover;
+  }
+}
+
+.other-services-section {
+  background-color: $color-white;
+  padding-top: 5rem;
+  padding-bottom: 4.5rem;
+}
+
+.best-rooms-section {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+}
+
+.best-room {
+  &__image {
+    transform: none;
+    display: block;
+  }
+  &__details {
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    padding: 2.5rem 3rem 3.5rem;
+  }
+  &__name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  &__occupancy {
+    padding-top: 0;
+    border: 0;
+    margin-bottom: 1.6rem;
+    font-family: $text-font-stack;
+    font-style: italic;
+  }
+  &__description {
+    margin-bottom: 2.4rem;
+    min-height: 7.2rem;
+    font-family: $text-font-stack;
+    /*font-size: 1.4rem;
+    line-height: 2.4rem;*/
+  }
+  &__link {
+    width: 100%;
+  }
+  &__button {
+    display: block;
+    width: 100%;
+    border: 2px solid $color-black;
+    border-radius: 5px;
+    padding: 1.5rem 3rem;
+    background-color: transparent;
+    color: $color-black;
+    text-align: center;
+  }
+}
+
+.book-now-section {
+  // background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url('../images/ballroom-3.png');
+  background-image: url('../images/ballroom-1.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  .bg-shaded {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.book-now {
+  &__content {
+    padding: 6rem 3rem 9rem;
+    color: #fff;
+
+    h2 {
+      font-size: 2.7rem;
+      line-height: 3.8rem;
+    }
+    p {
+      font-family: $text-font-stack;
+      margin-top: 2.4rem;
+    }
+  }
+  &__link {
+  }
+  &__button {
+    // display: block;
+    display: inline-block;
+    // width: 100%;
+    border: 2px solid $color-white;
+    border-radius: 5px;
+    margin-top: 2.4rem;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: $color-white;
+    text-align: center;
+  }
+}
+
+.testimonial {
+  &-section {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    text-align: center;
+    h2 {
+      font-size: 5rem;
+      margin-bottom: 5rem;
+    }
+  }
+  &__image {
+    border-radius: 50%;
+    transform: none;
+    max-width: 100px;
+    margin-bottom: 2rem;
+  }
+  &__name {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+  &__quote {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  // background-color: goldenrod;
+  margin: 3rem auto;
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-container {
+  display: flex;
+}

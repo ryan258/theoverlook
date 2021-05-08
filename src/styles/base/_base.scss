@@ -44,7 +44,7 @@ html {
 }
 
 body {
-  padding: 3rem;
+  // padding: 3rem;
   @include respond(tab-port) {
     padding: 0;
   }
@@ -67,5 +67,21 @@ a {
   @include on-event {
     color: $text-color;
     text-decoration: underline;
+  }
+}
+
+.test-section {
+  &-1 {
+    min-height: 100vh;
+    // background-color: $;
+  }
+  &-2 {
+    background-color: $color-primary;
+  }
+  &-3 {
+  }
+  &-4 {
+  }
+  &-5 {
   }
 }

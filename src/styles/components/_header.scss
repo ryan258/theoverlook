@@ -1,6 +1,26 @@
 .header {
+  display: flex;
+  justify-content: space-between;
   background-color: $color-tertiary;
   position: relative;
-  height: 85vh;
-  background-image: url();
+  padding: 0 2rem;
+  // height: 5rem;
+  // background-image: linear-gradient(from top rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 1)) url('../images/exterior-bright.png');
+  // background-size: cover;
+
+  &__navigation-list {
+    list-style: none;
+    text-transform: uppercase;
+  }
+  &__navigation-item {
+    display: inline-block;
+
+    a {
+      margin-left: 20px;
+      &:hover {
+        text-decoration: underline;
+        color: $color-white;
+      }
+    }
+  }
 }

@@ -1,6 +1,4 @@
-// -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
 
 /// Event wrapper
 /// @author Harry Roberts
@@ -29,6 +27,14 @@
 @mixin when-inside($context) {
   #{$context} & {
     @content;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 

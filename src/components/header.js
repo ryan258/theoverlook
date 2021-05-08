@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import Container from './container'
 
 const ListLink = (props) => {
   return (
-    <li className="">
+    <li className="header__navigation-item">
       <Link to={props.to}>{props.children}</Link>
     </li>
   )
@@ -11,19 +12,21 @@ const ListLink = (props) => {
 
 const Header = (props) => {
   return (
-    <header className="header">
-      <Link to="/">
-        <h3>Overlook Hotel</h3>
-      </Link>
-      <ul>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/gallery/">Gallery</ListLink>
-        <ListLink to="/faq/">FAQ</ListLink>
+    <header className="header ">
+      <Container>
+        <Link to="/" className="header__site-title ">
+          <h3>Overlook Hotel</h3>
+        </Link>
+        <ul className="header__navigation-list">
+          <ListLink to="/">Home</ListLink>
+          <ListLink to="/about/">About</ListLink>
+          <ListLink to="/gallery/">Gallery</ListLink>
+          <ListLink to="/faq/">FAQ</ListLink>
 
-        <ListLink to="/now-hiring">Now Hiring!</ListLink>
-        <ListLink to="/contact">Contact</ListLink>
-      </ul>
+          <ListLink to="/now-hiring">Now Hiring!</ListLink>
+          <ListLink to="/contact">Contact</ListLink>
+        </ul>
+      </Container>
     </header>
   )
 }

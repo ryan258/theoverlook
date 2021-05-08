@@ -1,0 +1,29 @@
+.hero {
+  background-color: $color-tertiary;
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url('../images/exterior-bright.png');
+  background-size: cover;
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+
+    .heading-primary {
+      transform: translateX(16px);
+    }
+  }
+  &__logo {
+    height: 3.5rem;
+  }
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /* background-color: #00f; */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    backface-visibility: hidden;
+  }
+}

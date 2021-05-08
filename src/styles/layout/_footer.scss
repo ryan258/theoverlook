@@ -1,3 +1,54 @@
-// -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
-// -----------------------------------------------------------------------------
+
+.footer {
+  background-color: gold;
+  padding-top: 5rem;
+  &__container {
+    display: flex;
+    align-items: start;
+  }
+  &__header {
+    margin-bottom: 4rem;
+  }
+  &__description {
+    // width: 50%;
+    // background-color: #fff;
+    &-text {
+      padding-right: 3rem;
+      font-family: $text-font-stack;
+    }
+  }
+  &__contact {
+    &__details {
+      font-family: $text-font-stack;
+    }
+    &__street {
+    }
+    &__city {
+    }
+    &__phone {
+    }
+    &__fax {
+    }
+    &__email {
+    }
+  }
+  &__subscribe {
+    &__form {
+      font-family: $text-font-stack;
+      margin-bottom: 1rem;
+    }
+    &__email-input {
+      padding: 0.7rem 4rem 0.7rem 1.3rem;
+    }
+    &__instructions {
+      font-family: $text-font-stack;
+      font-style: italic;
+    }
+  }
+  &__copyright {
+    border-top: 1px solid $color-black;
+    text-align: center;
+    padding: 2rem;
+  }
+}
